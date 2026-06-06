@@ -4,6 +4,9 @@ import ArrowForwardRoundedIcon from "@mui/icons-material/ArrowForwardRounded";
 import CheckCircleRoundedIcon from "@mui/icons-material/CheckCircleRounded";
 import StickyCardSections from "../components/StickyCardSections";
 import { ScrollSpreadIcons, ScrollSpreadText } from "../components/ScrollSpreadText";
+import heroSchoolImage from "../assets/geralt-education-3704026_1920.jpg";
+import titleBandImage from "../assets/roszie-school-7355056_1920.jpg";
+import admissionVisitImage from "../assets/roszie-school-7355057_1920.jpg";
 import {
   activities,
   facilities,
@@ -14,8 +17,7 @@ import {
   stats,
 } from "../data/schoolData";
 
-const heroImage =
-  "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1800&q=80";
+const heroImage = heroSchoolImage;
 
 const heroWords = ["A", "clean,", "modern", "school", "website", "built", "for", "bright", "beginnings."];
 
@@ -317,6 +319,10 @@ function Home() {
         className="font-display whitespace-nowrap text-[clamp(1.35rem,7.2vw,3rem)] font-bold uppercase tracking-tight"
         charClassName="text-[#d91f26]"
         heightClassName="min-h-[180px] py-6 md:min-h-[300px] md:py-12"
+        backgroundImage={titleBandImage}
+        backgroundAlt="Blurred school building background"
+        overlayClassName="bg-white/50"
+        backgroundBlurClassName="blur-[1.5px]"
       />
 
       <section className="page-shell-wide py-2 md:py-6">
@@ -332,7 +338,7 @@ function Home() {
 
       <section className="full-bleed-section bg-black py-12 md:py-16">
         <div className="page-shell">
-          <div className="grid items-center gap-6 lg:grid-cols-[1fr_auto]">
+          <div className="grid items-center gap-6 lg:grid-cols-[1.2fr_0.8fr]">
             <div>
               <span className="accent-pill bg-white/10 text-white">
                 <span className="red-dot bg-white" />
@@ -345,13 +351,20 @@ function Home() {
                 Speak with our team, visit the campus, and explore how Future Kids
                 School can support your child&apos;s early learning journey.
               </p>
+              <Link
+                to="/contact"
+                className="mt-6 inline-flex items-center justify-center rounded-full bg-[#d91f26] px-6 py-3.5 font-bold text-white transition hover:bg-white hover:text-black"
+              >
+                Enquire Now
+              </Link>
             </div>
-            <Link
-              to="/contact"
-              className="inline-flex items-center justify-center rounded-full bg-[#d91f26] px-6 py-3.5 font-bold text-white transition hover:bg-white hover:text-black"
-            >
-              Enquire Now
-            </Link>
+            <div className="image-frame min-h-[260px] border-white/10 bg-white/10">
+              <img
+                src={admissionVisitImage}
+                alt="Children outside the school campus"
+                className="h-full w-full object-cover"
+              />
+            </div>
           </div>
         </div>
       </section>

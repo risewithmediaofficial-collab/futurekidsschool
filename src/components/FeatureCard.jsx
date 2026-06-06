@@ -8,10 +8,10 @@ function FeatureCard({ title, description, icon: Icon, image, delay = 0 }) {
       viewport={{ once: true, amount: 0.25 }}
       transition={{ duration: 0.55, delay }}
       whileHover={{ y: -6 }}
-      className="section-card overflow-hidden rounded-[2rem]"
+      className="section-card overflow-hidden 'rounded-[2rem]"
     >
       {image ? (
-        <div className="image-frame aspect-[4/3] rounded-none border-x-0 border-t-0">
+        <div className="image-frame 'aspect-[4/3] rounded-none border-x-0 border-t-0">
           <img src={image} alt={title} />
         </div>
       ) : null}

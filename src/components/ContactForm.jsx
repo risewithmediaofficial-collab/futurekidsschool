@@ -2,7 +2,7 @@ import SendIcon from "@mui/icons-material/Send";
 
 function ContactForm() {
   return (
-    <div className="section-card rounded-[2rem] p-6 md:p-8">
+    <div className="section-card 'rounded-[2rem] p-6 md:p-8">
       <div className="mb-6">
         <p className="font-display text-3xl font-extrabold text-black">
           Send an Enquiry

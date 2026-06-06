@@ -85,6 +85,10 @@ export function ScrollSpreadText({
   charClassName = "text-[#d91f26]",
   containerClassName = "",
   heightClassName = "min-h-[340px] py-16 md:min-h-[420px] md:py-20",
+  backgroundImage,
+  backgroundAlt = "",
+  overlayClassName = "bg-white/55",
+  backgroundBlurClassName = "blur-[2px]",
 }) {
   const targetRef = useRef(null);
   const characters = text.split("");
@@ -93,6 +97,9 @@ export function ScrollSpreadText({
     target: targetRef,
     offset: ["start 0.92", "end 0.4"],
   });
+  const backgroundScale = useTransform(scrollYProgress, [0, 0.7], [1.08, 1.02]);
+  const backgroundY = useTransform(scrollYProgress, [0, 0.7], [18, 0]);
+  const backgroundOpacity = useTransform(scrollYProgress, [0, 0.25, 0.7], [0.72, 0.88, 1]);
 
   return (
     <div
@@ -103,8 +110,27 @@ export function ScrollSpreadText({
         containerClassName
       )}
     >
+      {backgroundImage ? (
+        <>
+          <motion.img
+            src={backgroundImage}
+            alt={backgroundAlt}
+            className={joinClasses(
+              "absolute inset-0 h-full w-full object-cover",
+              backgroundBlurClassName
+            )}
+            style={{
+              scale: backgroundScale,
+              y: backgroundY,
+              opacity: backgroundOpacity,
+            }}
+          />
+          <div className={joinClasses("absolute inset-0", overlayClassName)} />
+        </>
+      ) : null}
+
       <div
-        className={joinClasses("w-full max-w-6xl text-center leading-none", className)}
+        className={joinClasses("relative z-10 w-full max-w-6xl text-center leading-none", className)}
         style={{ perspective: "500px" }}
       >
         {characters.map((char, index) => (
