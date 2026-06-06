@@ -20,6 +20,8 @@ import {
 const heroImage = heroSchoolImage;
 
 const heroWords = ["A", "clean,", "modern", "school", "website", "built", "for", "bright", "beginnings."];
+const heroHighlights = ["Play-based curriculum", "Safe campus support", "Experienced teachers"];
+const statColors = ["#ef5b3f", "#27b3a8", "#ffb628", "#211c4f"];
 
 function Home() {
   const stickySections = [
@@ -37,14 +39,17 @@ function Home() {
           {features.map((item) => {
             const Icon = item.icon;
             return (
-              <div key={item.title} className="rounded-[1.1rem] border border-black/8 bg-white p-3 sm:p-4">
-                <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-[#d91f26] text-white">
+              <div
+                key={item.title}
+                className="rounded-[1.6rem] border border-[#211c4f]/8 bg-white p-3 shadow-[0_18px_35px_rgba(33,28,79,0.08)] sm:p-4"
+              >
+                <div className="flex h-10 w-10 items-center justify-center rounded-[1.1rem] bg-[#ef5b3f] text-white shadow-[0_10px_20px_rgba(239,91,63,0.24)]">
                   <Icon fontSize="small" />
                 </div>
-                <p className="mt-3 font-display text-sm font-bold leading-tight text-black sm:text-lg">
+                <p className="mt-3 font-display text-sm font-bold leading-tight text-[#211c4f] sm:text-lg">
                   {item.title}
                 </p>
-                <p className="mt-2 hidden text-sm leading-6 text-black/65 md:block">
+                <p className="mt-2 hidden text-sm leading-6 text-[#2e2a4d]/70 md:block">
                   {item.description}
                 </p>
               </div>
@@ -67,14 +72,17 @@ function Home() {
           {programs.map((item) => {
             const Icon = item.icon;
             return (
-              <div key={item.title} className="rounded-[1.1rem] border border-black/8 bg-white p-3 sm:p-4">
-                <div className="flex h-9 w-9 items-center justify-center rounded-2xl bg-black text-white">
+              <div
+                key={item.title}
+                className="rounded-[1.6rem] border border-[#211c4f]/8 bg-white p-3 shadow-[0_18px_35px_rgba(33,28,79,0.08)] sm:p-4"
+              >
+                <div className="flex h-9 w-9 items-center justify-center rounded-[1rem] bg-[#211c4f] text-white shadow-[0_10px_20px_rgba(33,28,79,0.24)]">
                   <Icon fontSize="small" />
                 </div>
-                <p className="mt-3 font-display text-sm font-bold leading-tight text-black sm:text-lg">
+                <p className="mt-3 font-display text-sm font-bold leading-tight text-[#211c4f] sm:text-lg">
                   {item.title}
                 </p>
-                <p className="mt-2 hidden text-sm leading-6 text-black/65 md:block">
+                <p className="mt-2 hidden text-sm leading-6 text-[#2e2a4d]/70 md:block">
                   {item.description}
                 </p>
               </div>
@@ -97,14 +105,17 @@ function Home() {
           {highlights.map((item) => {
             const Icon = item.icon;
             return (
-              <div key={item.title} className="rounded-[1.1rem] border border-black/8 bg-white p-3 sm:p-4">
-                <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-[#d91f26] text-white">
+              <div
+                key={item.title}
+                className="rounded-[1.6rem] border border-[#211c4f]/8 bg-white p-3 shadow-[0_18px_35px_rgba(33,28,79,0.08)] sm:p-4"
+              >
+                <div className="flex h-10 w-10 items-center justify-center rounded-[1.1rem] bg-[#27b3a8] text-white shadow-[0_10px_20px_rgba(39,179,168,0.24)]">
                   <Icon fontSize="small" />
                 </div>
-                <p className="mt-3 font-display text-sm font-bold leading-tight text-black sm:text-lg">
+                <p className="mt-3 font-display text-sm font-bold leading-tight text-[#211c4f] sm:text-lg">
                   {item.title}
                 </p>
-                <p className="mt-2 hidden text-sm leading-6 text-black/65 md:block">
+                <p className="mt-2 hidden text-sm leading-6 text-[#2e2a4d]/70 md:block">
                   {item.description}
                 </p>
               </div>
@@ -127,14 +138,17 @@ function Home() {
           {facilities.map((item) => {
             const Icon = item.icon;
             return (
-              <div key={item.title} className="rounded-[1.1rem] border border-black/8 bg-white p-3 sm:p-4">
-                <div className="flex h-9 w-9 items-center justify-center rounded-2xl bg-black text-white">
+              <div
+                key={item.title}
+                className="rounded-[1.6rem] border border-[#211c4f]/8 bg-white p-3 shadow-[0_18px_35px_rgba(33,28,79,0.08)] sm:p-4"
+              >
+                <div className="flex h-9 w-9 items-center justify-center rounded-[1rem] bg-[#ffb628] text-white shadow-[0_10px_20px_rgba(255,182,40,0.24)]">
                   <Icon fontSize="small" />
                 </div>
-                <p className="mt-3 font-display text-sm font-bold leading-tight text-black sm:text-base">
+                <p className="mt-3 font-display text-sm font-bold leading-tight text-[#211c4f] sm:text-base">
                   {item.title}
                 </p>
-                <p className="mt-2 hidden text-sm leading-6 text-black/65 md:block">
+                <p className="mt-2 hidden text-sm leading-6 text-[#2e2a4d]/70 md:block">
                   {item.description}
                 </p>
               </div>
@@ -157,14 +171,17 @@ function Home() {
           {activities.map((item) => {
             const Icon = item.icon;
             return (
-              <div key={item.title} className="rounded-[1.1rem] border border-black/8 bg-white p-3 sm:p-4">
-                <div className="flex h-9 w-9 items-center justify-center rounded-2xl bg-[#d91f26] text-white">
+              <div
+                key={item.title}
+                className="rounded-[1.6rem] border border-[#211c4f]/8 bg-white p-3 shadow-[0_18px_35px_rgba(33,28,79,0.08)] sm:p-4"
+              >
+                <div className="flex h-9 w-9 items-center justify-center rounded-[1rem] bg-[#ef5b3f] text-white shadow-[0_10px_20px_rgba(239,91,63,0.24)]">
                   <Icon fontSize="small" />
                 </div>
-                <p className="mt-3 font-display text-sm font-bold leading-tight text-black sm:text-lg">
+                <p className="mt-3 font-display text-sm font-bold leading-tight text-[#211c4f] sm:text-lg">
                   {item.title}
                 </p>
-                <p className="mt-2 hidden text-sm leading-6 text-black/65 md:block">
+                <p className="mt-2 hidden text-sm leading-6 text-[#2e2a4d]/70 md:block">
                   {item.description}
                 </p>
               </div>
@@ -187,17 +204,20 @@ function Home() {
           {schedule.map((item) => {
             const Icon = item.icon;
             return (
-              <div key={item.title} className="rounded-[1.1rem] border border-black/8 bg-white p-3 sm:p-4">
-                <div className="flex h-9 w-9 items-center justify-center rounded-2xl bg-black text-white">
+              <div
+                key={item.title}
+                className="rounded-[1.6rem] border border-[#211c4f]/8 bg-white p-3 shadow-[0_18px_35px_rgba(33,28,79,0.08)] sm:p-4"
+              >
+                <div className="flex h-9 w-9 items-center justify-center rounded-[1rem] bg-[#211c4f] text-white shadow-[0_10px_20px_rgba(33,28,79,0.24)]">
                   <Icon fontSize="small" />
                 </div>
-                <p className="mt-3 text-[11px] font-extrabold uppercase tracking-[0.18em] text-[#d91f26]">
+                <p className="mt-3 text-[11px] font-extrabold uppercase tracking-[0.18em] text-[#ef5b3f]">
                   {item.time}
                 </p>
-                <p className="mt-2 font-display text-sm font-bold leading-tight text-black sm:text-lg">
+                <p className="mt-2 font-display text-sm font-bold leading-tight text-[#211c4f] sm:text-lg">
                   {item.title}
                 </p>
-                <p className="mt-2 hidden text-sm leading-6 text-black/65 md:block">
+                <p className="mt-2 hidden text-sm leading-6 text-[#2e2a4d]/70 md:block">
                   {item.detail}
                 </p>
               </div>
@@ -223,19 +243,28 @@ function Home() {
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -24 }}
       transition={{ duration: 0.45, ease: "easeOut" }}
-      className="bg-white"
+      className="bg-transparent"
     >
-      <section className="full-bleed-section relative min-h-screen overflow-hidden">
+      <section className="full-bleed-section relative min-h-[calc(100vh-96px)] overflow-hidden wavy-divider">
+        <div className="theme-orb theme-orb--yellow left-[5%] top-24 h-20 w-20 opacity-80 md:h-28 md:w-28" />
+        <div className="theme-orb theme-orb--teal right-[8%] top-40 h-14 w-14 opacity-70 md:h-20 md:w-20" />
+        <div className="theme-orb theme-orb--coral bottom-24 right-[18%] h-10 w-10 opacity-80 md:h-14 md:w-14" />
         <img
           src={heroImage}
           alt="Kids in a bright classroom"
-          className="absolute inset-0 h-full w-full object-cover"
+          className="absolute inset-y-0 right-0 h-full w-full object-cover object-center md:w-[54%]"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-white via-white/84 to-white/28" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/28 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#fffaf2] via-[#fffaf2]/92 to-[#fffaf2]/20" />
+        <div className="absolute inset-y-0 right-0 hidden w-[54%] bg-gradient-to-l from-[#211c4f]/24 via-transparent to-transparent md:block" />
+        <div className="absolute inset-0 pattern-dots opacity-25" />
 
-        <div className="page-shell-wide relative flex min-h-screen items-center py-20 md:py-24">
-          <div className="max-w-3xl">
+        <div className="page-shell-wide relative grid min-h-[calc(100vh-96px)] items-center gap-8 py-12 md:grid-cols-[0.98fr_1.02fr] md:py-14 lg:gap-10">
+          <div className="max-w-3xl self-center">
+            <span className="accent-pill">
+              <span className="red-dot" />
+              Joyful learning, thoughtfully guided
+            </span>
+
             <div className="mt-5 flex max-w-4xl flex-wrap gap-x-3 gap-y-2">
               {heroWords.map((word, index) => (
                 <motion.span
@@ -247,7 +276,7 @@ function Home() {
                     delay: 0.08 * index,
                     ease: [0.16, 1, 0.3, 1],
                   }}
-                  className="font-display text-4xl font-bold leading-[1] text-black sm:text-5xl md:text-6xl xl:text-7xl"
+                  className="font-display text-4xl font-bold leading-[0.98] text-[#211c4f] sm:text-5xl md:text-[4.1rem] xl:text-[4.6rem]"
                 >
                   {word}
                 </motion.span>
@@ -258,7 +287,7 @@ function Home() {
               initial={{ opacity: 0, y: 28 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.55, ease: "easeOut" }}
-              className="mt-5 max-w-2xl text-base leading-8 text-black/70 md:text-lg"
+              className="mt-4 max-w-2xl text-base leading-7 text-[#2e2a4d]/75 md:text-[1.02rem]"
             >
               Future Kids School combines trusted care, joyful classrooms, and a
               modern early-learning experience for parents who want safety,
@@ -269,18 +298,18 @@ function Home() {
               initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.75, ease: "easeOut" }}
-              className="mt-8 flex flex-col gap-3 sm:flex-row"
+              className="mt-7 flex flex-col gap-3 sm:flex-row"
             >
               <Link
                 to="/contact"
-                className="inline-flex items-center justify-center gap-2 rounded-full bg-[#d91f26] px-6 py-3.5 font-bold text-white transition hover:bg-black"
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-[#ef5b3f] px-6 py-3.5 font-bold text-white shadow-[0_16px_30px_rgba(239,91,63,0.28)] transition hover:bg-[#211c4f]"
               >
                 Book Admission
                 <ArrowForwardRoundedIcon fontSize="small" />
               </Link>
               <Link
                 to="/about"
-                className="inline-flex items-center justify-center rounded-full border border-black/10 bg-white/85 px-6 py-3.5 font-bold text-black transition hover:border-[#d91f26] hover:text-[#d91f26]"
+                className="inline-flex items-center justify-center rounded-full border border-[#211c4f]/10 bg-white/92 px-6 py-3.5 font-bold text-[#211c4f] shadow-[0_14px_28px_rgba(33,28,79,0.08)] transition hover:border-[#27b3a8] hover:text-[#27b3a8]"
               >
                 Explore School
               </Link>
@@ -290,38 +319,88 @@ function Home() {
               initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.95, ease: "easeOut" }}
-              className="mt-8 grid gap-3 sm:grid-cols-3"
+              className="mt-7 grid gap-3 sm:grid-cols-3"
             >
-              {["Play-based curriculum", "Safe campus support", "Experienced teachers"].map((item) => (
-                <div key={item} className="stat-chip flex items-center gap-2 px-4 py-3 text-sm font-semibold text-black">
-                  <CheckCircleRoundedIcon className="text-[#d91f26]" fontSize="small" />
+              {heroHighlights.map((item) => (
+                <div
+                  key={item}
+                  className="stat-chip flex items-center gap-2 px-4 py-3 text-sm font-semibold text-[#211c4f]"
+                >
+                  <CheckCircleRoundedIcon className="text-[#27b3a8]" fontSize="small" />
                   <span>{item}</span>
                 </div>
               ))}
             </motion.div>
           </div>
+
+          <div className="relative hidden min-h-[500px] self-center md:block lg:min-h-[540px]">
+            <motion.div
+              initial={{ opacity: 0, x: -220, y: -120, rotate: -22, scale: 0.82 }}
+              animate={{ opacity: 1, x: 0, y: 0, rotate: -7, scale: 1 }}
+              transition={{ duration: 1.05, delay: 0.25, ease: [0.16, 1, 0.3, 1] }}
+              className="playful-frame playful-frame--blob absolute left-10 top-8 z-10 w-[31%] bg-[#fff6e2] p-2.5"
+              style={{ transformOrigin: "bottom right" }}
+            >
+              <img
+                src={titleBandImage}
+                alt="School illustration"
+                className="aspect-square w-full rounded-[36%_64%_58%_42%/45%_38%_62%_55%] object-cover"
+              />
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 260, y: 130, rotate: 18, scale: 0.86 }}
+              animate={{ opacity: 1, x: 0, y: 0, rotate: 3, scale: 1 }}
+              transition={{ duration: 1.15, delay: 0.42, ease: [0.16, 1, 0.3, 1] }}
+              className="playful-frame playful-frame--card absolute right-0 top-12 w-[54%] bg-white p-3"
+              style={{ transformOrigin: "top left" }}
+            >
+              <img
+                src={admissionVisitImage}
+                alt="Children on campus"
+                className="h-[220px] w-full rounded-[1.6rem_1.6rem_2.1rem_1.4rem] object-cover lg:h-[245px]"
+              />
+              <div className="mt-3 flex items-end justify-between gap-3">
+                <div>
+                  <p className="text-xs font-extrabold uppercase tracking-[0.2em] text-[#27b3a8]">Creative Play</p>
+                  <p className="mt-1 font-display text-xl leading-tight text-[#211c4f] lg:text-2xl">Warm spaces for bright beginnings</p>
+                </div>
+                <div className="shrink-0 rounded-full bg-[#211c4f] px-4 py-2.5 text-sm font-bold text-white">Safe</div>
+              </div>
+            </motion.div>
+          </div>
         </div>
       </section>
 
-      <section className="page-shell py-6 md:py-10">
-        <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
-          {stats.map((item) => (
-            <div key={item.label} className="section-card px-5 py-6 text-center">
-              <p className="font-display text-3xl font-bold text-[#d91f26] md:text-4xl">{item.value}</p>
-              <p className="mt-2 text-sm font-semibold text-black/70">{item.label}</p>
-            </div>
-          ))}
+      <section className="page-shell py-8 md:py-12">
+        <div className="section-surface px-5 py-8 md:px-8 md:py-10">
+          <div className="relative z-10 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+            {stats.map((item, index) => (
+              <div
+                key={item.label}
+                className="relative overflow-hidden rounded-[2rem] bg-white px-5 py-6 text-center shadow-[0_18px_35px_rgba(33,28,79,0.08)]"
+              >
+                <div
+                  className="mx-auto flex h-20 w-20 items-center justify-center rounded-full text-white shadow-[0_16px_30px_rgba(33,28,79,0.16)]"
+                  style={{ background: statColors[index % statColors.length] }}
+                >
+                  <p className="font-display text-2xl font-bold md:text-3xl">{item.value}</p>
+                </div>
+                <p className="mt-4 text-sm font-semibold text-[#2e2a4d]/80">{item.label}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
       <ScrollSpreadText
         text="future kids school"
         className="font-display whitespace-nowrap text-[clamp(1.35rem,7.2vw,3rem)] font-bold uppercase tracking-tight"
-        charClassName="text-[#d91f26]"
+        charClassName="text-[#ef5b3f]"
         heightClassName="min-h-[180px] py-6 md:min-h-[300px] md:py-12"
         backgroundImage={titleBandImage}
         backgroundAlt="Blurred school building background"
-        overlayClassName="bg-white/50"
+        overlayClassName="bg-[#fffaf2]/48"
         backgroundBlurClassName="blur-[1.5px]"
       />
 
@@ -333,12 +412,13 @@ function Home() {
         title="See our school world unfold"
         icons={iconRow}
         mode="rotate"
+        className="mx-3 rounded-[2.5rem] bg-[linear-gradient(180deg,rgba(255,255,255,0.85),rgba(239,245,255,0.75))] shadow-[0_28px_70px_rgba(33,28,79,0.08)] md:mx-6"
         heightClassName="min-h-[340px] py-8 md:min-h-[460px] md:py-12"
       />
 
-      <section className="full-bleed-section bg-black py-12 md:py-16">
+      <section className="full-bleed-section py-12 md:py-16">
         <div className="page-shell">
-          <div className="grid items-center gap-6 lg:grid-cols-[1.2fr_0.8fr]">
+          <div className="dark-play-surface grid items-center gap-6 rounded-[2.8rem] px-6 py-8 shadow-[0_28px_70px_rgba(20,14,55,0.22)] md:px-10 md:py-12 lg:grid-cols-[1.2fr_0.8fr]">
             <div>
               <span className="accent-pill bg-white/10 text-white">
                 <span className="red-dot bg-white" />
@@ -353,16 +433,16 @@ function Home() {
               </p>
               <Link
                 to="/contact"
-                className="mt-6 inline-flex items-center justify-center rounded-full bg-[#d91f26] px-6 py-3.5 font-bold text-white transition hover:bg-white hover:text-black"
+                className="mt-6 inline-flex items-center justify-center rounded-full bg-[#ef5b3f] px-6 py-3.5 font-bold text-white shadow-[0_16px_28px_rgba(239,91,63,0.28)] transition hover:bg-white hover:text-[#211c4f]"
               >
                 Enquire Now
               </Link>
             </div>
-            <div className="image-frame min-h-[260px] border-white/10 bg-white/10">
+            <div className="playful-frame playful-frame--card relative z-10 min-h-[260px] bg-white p-3">
               <img
                 src={admissionVisitImage}
                 alt="Children outside the school campus"
-                className="h-full w-full object-cover"
+                className="h-full w-full rounded-[1.8rem_1.8rem_2.4rem_1.6rem] object-cover"
               />
             </div>
           </div>
