@@ -110,7 +110,7 @@ function StickyCardSections({
               }}
               className="absolute inset-0 flex items-center justify-center"
             >
-              <div className="section-surface grid h-[78vh] 'min-h-[620px]' w-full overflow-hidden grid-rows-[220px_1fr] md:h-full md:min-h-0 md:grid-cols-[1.08fr_0.92fr] md:grid-rows-1">
+              <div className="section-surface grid h-[78vh] min-h-[620px] w-full overflow-hidden grid-rows-[220px_1fr] md:h-full md:min-h-0 md:grid-cols-[1.08fr_0.92fr] md:grid-rows-1">
                 <div className="relative overflow-hidden bg-[#211c4f] md:hidden">
                   <img
                     src={card.image}
@@ -128,11 +128,11 @@ function StickyCardSections({
                     </span>
                   ) : null}
 
-                  <h2 className="mt-4 font-display text-2xl font-bold leading-[1.05] text-[#211c4f] sm:text-3xl md:mt-5 md:text-4xl lg:text-5xl">
+                  <h2 className="mt-4 font-display text-2xl font-bold leading-[1.02] text-[#211c4f] sm:text-3xl md:mt-5 md:text-4xl lg:text-[3.1rem]">
                     {card.title}
                   </h2>
 
-                  <p className="mt-3 hidden text-sm leading-6 text-[#2e2a4d]/75 md:block md:text-base md:leading-8">
+                  <p className="mt-3 hidden text-sm leading-7 text-[#2e2a4d]/74 md:block md:text-base md:leading-8">
                     {card.description}
                   </p>
 

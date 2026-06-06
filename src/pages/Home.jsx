@@ -260,12 +260,7 @@ function Home() {
 
         <div className="page-shell-wide relative grid min-h-[calc(100vh-96px)] items-center gap-8 py-12 md:grid-cols-[0.98fr_1.02fr] md:py-14 lg:gap-10">
           <div className="max-w-3xl self-center">
-            <span className="accent-pill">
-              <span className="red-dot" />
-              Joyful learning, thoughtfully guided
-            </span>
-
-            <div className="mt-5 flex max-w-4xl flex-wrap gap-x-3 gap-y-2">
+            <div className="flex max-w-4xl flex-wrap gap-x-3 gap-y-2">
               {heroWords.map((word, index) => (
                 <motion.span
                   key={`${word}-${index}`}
@@ -374,7 +369,7 @@ function Home() {
 
       <section className="page-shell py-8 md:py-12">
         <div className="section-surface px-5 py-8 md:px-8 md:py-10">
-          <div className="relative z-10 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+          <div className="relative z-10 grid gap-5 sm:grid-cols-2 xl:grid-cols-4">
             {stats.map((item, index) => (
               <div
                 key={item.label}
