@@ -37,14 +37,14 @@ function Navbar() {
     <header className="sticky top-0 z-50 border-b border-black/8 bg-white/95 backdrop-blur">
       <div className="page-shell flex items-center justify-between gap-4 py-3">
         <NavLink to="/" className="flex items-center gap-3">
-          <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-[#d91f26] text-white">
+          <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl bg-[#d91f26] text-white sm:h-11 sm:w-11">
             <SchoolIcon fontSize="medium" />
           </div>
-          <div>
-            <p className="font-display text-[1.85rem] font-bold leading-none text-black">
+          <div className="min-w-0">
+            <p className="font-display text-[clamp(1.45rem,7vw,1.85rem)] font-bold leading-none text-black">
               Future Kids
             </p>
-            <p className="text-[11px] font-extrabold uppercase tracking-[0.24em] text-[#d91f26]">
+            <p className="text-[10px] font-extrabold uppercase tracking-[0.2em] text-[#d91f26] sm:text-[11px] sm:tracking-[0.24em]">
               School
             </p>
           </div>

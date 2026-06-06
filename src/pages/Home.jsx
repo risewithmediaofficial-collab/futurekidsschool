@@ -314,9 +314,9 @@ function Home() {
 
       <ScrollSpreadText
         text="future kids school"
-        className="font-display text-3xl font-bold uppercase tracking-tight md:text-5xl"
+        className="font-display whitespace-nowrap text-[clamp(1.35rem,7.2vw,3rem)] font-bold uppercase tracking-tight"
         charClassName="text-[#d91f26]"
-        heightClassName="min-h-[220px] py-8 md:min-h-[300px] md:py-12"
+        heightClassName="min-h-[180px] py-6 md:min-h-[300px] md:py-12"
       />
 
       <section className="page-shell-wide py-2 md:py-6">
