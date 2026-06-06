@@ -129,9 +129,9 @@ function About() {
 
       <ScrollSpreadText
         text="safe joyful creative"
-        className="font-display whitespace-nowrap text-[2rem] font-bold uppercase tracking-tight md:text-5xl"
+        className="font-display whitespace-nowrap text-[clamp(1.25rem,4.8vw,2rem)] font-bold uppercase tracking-tight md:text-5xl"
         charClassName="text-black"
-        heightClassName="min-h-[220px] py-8 md:min-h-[320px] md:py-12"
+        heightClassName="min-h-[150px] py-4 md:min-h-[320px] md:py-12"
       />
 
       <section className="page-shell py-10 md:py-14">

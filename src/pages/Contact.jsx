@@ -75,9 +75,9 @@ function Contact() {
 
       <ScrollSpreadText
         text="book your campus visit"
-        className="font-display text-3xl font-bold uppercase tracking-tight md:text-5xl"
+        className="font-display whitespace-nowrap text-[clamp(1rem,4vw,1.65rem)] font-bold uppercase tracking-tight md:text-5xl"
         charClassName="text-[#d91f26]"
-        heightClassName="min-h-[240px] py-10 md:min-h-[320px] md:py-12"
+        heightClassName="min-h-[150px] py-4 md:min-h-[320px] md:py-12"
       />
 
       <section className="page-shell py-10 md:py-14">
