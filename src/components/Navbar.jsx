@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import SchoolIcon from "@mui/icons-material/School";
@@ -12,6 +12,7 @@ const navLinks = [
 
 function Navbar() {
   const [open, setOpen] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const onResize = () => {
@@ -33,10 +34,18 @@ function Navbar() {
         : "text-black before:scale-x-0 before:origin-left hover:text-white hover:before:scale-x-100 hover:shadow-[0_10px_24px_rgba(217,31,38,0.18)]",
     ].join(" ");
 
+  const handleNavClick = (path) => {
+    if (location.pathname === path) {
+      window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+    }
+
+    setOpen(false);
+  };
+
   return (
     <header className="sticky top-0 z-50 border-b border-black/8 bg-white/95 backdrop-blur">
       <div className="page-shell flex items-center justify-between gap-4 py-3">
-        <NavLink to="/" className="flex items-center gap-3">
+        <NavLink to="/" className="flex items-center gap-3" onClick={() => handleNavClick("/")}>
           <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl bg-[#d91f26] text-white sm:h-11 sm:w-11">
             <SchoolIcon fontSize="medium" />
           </div>
@@ -52,7 +61,12 @@ function Navbar() {
 
         <nav className="hidden items-center gap-2 md:flex">
           {navLinks.map((link) => (
-            <NavLink key={link.path} to={link.path} className={linkClass}>
+            <NavLink
+              key={link.path}
+              to={link.path}
+              className={linkClass}
+              onClick={() => handleNavClick(link.path)}
+            >
               <span className="relative z-10">{link.name}</span>
             </NavLink>
           ))}
@@ -77,7 +91,7 @@ function Navbar() {
                   key={link.path}
                   to={link.path}
                   className={linkClass}
-                  onClick={() => setOpen(false)}
+                  onClick={() => handleNavClick(link.path)}
                 >
                   <span className="relative z-10">{link.name}</span>
                 </NavLink>
