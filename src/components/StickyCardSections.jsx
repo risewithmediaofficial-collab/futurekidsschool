@@ -99,7 +99,7 @@ function StickyCardSections({
     <div ref={containerRef} className={`relative w-full ${className}`}>
       <div
         ref={stackRef}
-        className={`relative flex h-[78vh] min-h-[620px] w-full items-center justify-center overflow-hidden md:h-[82vh] md:min-h-[720px] ${containerClassName}`}
+        className={`relative flex h-[82vh] min-h-[680px] w-full items-center justify-center overflow-hidden md:h-[82vh] md:min-h-[720px] ${containerClassName}`}
       >
         <div className="relative h-full w-full">
           {cards.map((card, index) => (
@@ -110,16 +110,17 @@ function StickyCardSections({
               }}
               className="absolute inset-0 flex items-center justify-center"
             >
-              <div className="section-card grid h-[74vh] min-h-[540px] w-full overflow-hidden rounded-[1.5rem] grid-cols-[120px_1fr] md:h-full md:min-h-0 md:grid-cols-[1.08fr_0.92fr]">
+              <div className="section-card grid h-[78vh] min-h-[620px] w-full overflow-hidden rounded-[1.5rem] grid-rows-[220px_1fr] md:h-full md:min-h-0 md:grid-cols-[1.08fr_0.92fr] md:grid-rows-1">
                 <div className="relative overflow-hidden bg-black md:hidden">
                   <img
                     src={card.image}
                     alt={card.alt || card.title}
                     className={`h-full w-full object-cover ${imageClassName}`}
                   />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/25 via-transparent to-transparent" />
                 </div>
 
-                <div className="min-w-0 overflow-y-auto p-4 sm:p-5 md:p-8 lg:p-10">
+                <div className="min-w-0 overflow-hidden p-4 sm:p-5 md:p-8 lg:p-10">
                   {card.eyebrow ? (
                     <span className="accent-pill">
                       <span className="red-dot" />
@@ -131,7 +132,7 @@ function StickyCardSections({
                     {card.title}
                   </h2>
 
-                  <p className="mt-3 text-sm leading-6 text-black/65 sm:text-[15px] sm:leading-7 md:mt-4 md:text-base md:leading-8">
+                  <p className="mt-3 hidden text-sm leading-6 text-black/65 md:block md:text-base md:leading-8">
                     {card.description}
                   </p>
 

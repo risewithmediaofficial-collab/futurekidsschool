@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import FavoriteRoundedIcon from "@mui/icons-material/FavoriteRounded";
 import VisibilityRoundedIcon from "@mui/icons-material/VisibilityRounded";
 import SectionTitle from "../components/SectionTitle";
-import FeatureCard from "../components/FeatureCard";
+import StickyCardSections from "../components/StickyCardSections";
 import { ScrollSpreadText } from "../components/ScrollSpreadText";
 import { aboutCards, faqs, features, values } from "../data/schoolData";
 
@@ -13,6 +13,66 @@ const teamImage =
   "https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=1600&q=80";
 
 function About() {
+  const aboutStickyCards = [
+    {
+      id: "values",
+      eyebrow: "Our Values",
+      title: "The values that shape every school day.",
+      description:
+        "These ideas guide how we teach, support children, and build trust with parents from the very first interaction.",
+      image:
+        "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1400&q=80",
+      imageCaption: "Warm, child-first culture",
+      content: (
+        <div className="grid grid-cols-2 gap-3 md:grid-cols-3">
+          {values.map((item) => (
+            <div key={item.title} className="rounded-[1.1rem] border border-black/8 bg-white p-3 sm:p-4">
+              <p className="text-[11px] font-extrabold uppercase tracking-[0.18em] text-[#d91f26]">
+                {item.title}
+              </p>
+              <p className="mt-2 font-display text-sm font-bold leading-tight text-black sm:text-lg">
+                {item.title}
+              </p>
+              <p className="mt-2 hidden text-sm leading-6 text-black/65 md:block">
+                {item.description}
+              </p>
+            </div>
+          ))}
+        </div>
+      ),
+    },
+    {
+      id: "features",
+      eyebrow: "School Features",
+      title: "The systems and spaces behind a better learning experience.",
+      description:
+        "Future Kids School combines modern classroom expectations with a child-friendly environment built around comfort and confidence.",
+      image:
+        "https://images.unsplash.com/photo-1588072432836-e10032774350?auto=format&fit=crop&w=1400&q=80",
+      imageCaption: "Modern classrooms and care",
+      content: (
+        <div className="grid grid-cols-2 gap-3 md:grid-cols-4">
+          {features.map((item) => {
+            const Icon = item.icon;
+            return (
+              <div key={item.title} className="rounded-[1.1rem] border border-black/8 bg-white p-3 sm:p-4">
+                <div className="flex h-9 w-9 items-center justify-center rounded-2xl bg-[#d91f26] text-white">
+                  <Icon fontSize="small" />
+                </div>
+                <p className="mt-3 font-display text-sm font-bold leading-tight text-black sm:text-base">
+                  {item.title}
+                </p>
+                <p className="mt-2 hidden text-sm leading-6 text-black/65 md:block">
+                  {item.description}
+                </p>
+              </div>
+            );
+          })}
+        </div>
+      ),
+    },
+  ];
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 24 }}
@@ -81,7 +141,7 @@ function About() {
               <FavoriteRoundedIcon />
             </div>
             <p className="mt-5 font-display text-2xl font-bold text-black md:text-3xl">Our Mission</p>
-            <p className="mt-3 text-base leading-8 text-black/65">
+            <p className="mt-3 text-sm leading-7 text-black/65 md:text-base md:leading-8">
               To provide a safe, joyful, and engaging learning environment where
               children develop communication, creativity, social confidence, and
               strong early school habits.
@@ -93,7 +153,7 @@ function About() {
               <VisibilityRoundedIcon />
             </div>
             <p className="mt-5 font-display text-2xl font-bold text-black md:text-3xl">Our Vision</p>
-            <p className="mt-3 text-base leading-8 text-black/65">
+            <p className="mt-3 text-sm leading-7 text-black/65 md:text-base md:leading-8">
               To become a trusted early-learning school that helps every child
               begin their education with confidence, curiosity, and care.
             </p>
@@ -101,36 +161,8 @@ function About() {
         </div>
       </section>
 
-      <section className="page-shell py-10 md:py-14">
-        <SectionTitle
-          badge="Our Values"
-          title="What shapes our daily culture."
-          description="These values guide how we teach, support children, and build trust with families."
-        />
-        <div className="grid gap-6 md:grid-cols-3">
-          {values.map((item) => (
-            <div key={item.title} className="section-card p-6">
-              <p className="text-sm font-extrabold uppercase tracking-[0.18em] text-[#d91f26]">
-                {item.title}
-              </p>
-              <p className="mt-3 font-display text-2xl font-bold text-black md:text-3xl">{item.title}</p>
-              <p className="mt-3 text-sm leading-7 text-black/65">{item.description}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <section className="page-shell py-10 md:py-14">
-        <SectionTitle
-          badge="School Features"
-          title="The systems and spaces behind a better learning experience."
-          description="Future Kids School combines modern classroom expectations with a child-friendly environment."
-        />
-        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
-          {features.map((item, index) => (
-            <FeatureCard key={item.title} {...item} delay={index * 0.08} />
-          ))}
-        </div>
+      <section className="page-shell-wide py-2 md:py-6">
+        <StickyCardSections cards={aboutStickyCards} />
       </section>
 
       <section className="page-shell py-10 md:py-14">
@@ -142,7 +174,7 @@ function About() {
               description="Our placeholder team approach centers on emotional safety, guided learning, and healthy parent communication."
               align="left"
             />
-            <p className="text-base leading-8 text-black/65">
+            <p className="text-sm leading-7 text-black/65 md:text-base md:leading-8">
               We believe the best early-learning environments are built by adults
               who understand both the academic and emotional needs of young children.
             </p>

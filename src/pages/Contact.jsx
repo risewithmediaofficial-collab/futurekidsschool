@@ -40,7 +40,7 @@ function Contact() {
           <h1 className="mt-5 max-w-4xl font-display text-balance text-4xl font-bold leading-[1] text-black md:text-6xl">
             Let&apos;s talk about your child&apos;s admission journey.
           </h1>
-          <p className="mt-5 max-w-2xl text-base leading-8 text-black/70 md:text-lg">
+          <p className="mt-5 max-w-2xl text-sm leading-7 text-black/70 md:text-lg md:leading-8">
             Have questions about programs, campus visits, or school timing?
             Reach out and we can tailor the content later with your final school details.
           </p>
@@ -93,7 +93,7 @@ function Contact() {
               <p className="mt-3 font-display text-2xl font-bold text-black md:text-3xl">
                 Book an in-person meeting with our team.
               </p>
-              <p className="mt-3 text-base leading-8 text-black/65">
+              <p className="mt-3 text-sm leading-7 text-black/65 md:text-base md:leading-8">
                 Tour the classrooms, understand our daily routine, and speak with
                 the school team about the right learning stage for your child.
               </p>

@@ -31,7 +31,7 @@ function Home() {
         "https://images.unsplash.com/photo-1588072432904-843af37f03ed?auto=format&fit=crop&w=1400&q=80",
       imageCaption: "Safe, guided classroom learning",
       content: (
-        <div className="grid gap-3 sm:grid-cols-2">
+        <div className="grid grid-cols-2 gap-3 sm:grid-cols-2">
           {features.map((item) => {
             const Icon = item.icon;
             return (
@@ -39,8 +39,12 @@ function Home() {
                 <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-[#d91f26] text-white">
                   <Icon fontSize="small" />
                 </div>
-                <p className="mt-3 font-display text-base font-bold text-black sm:text-lg">{item.title}</p>
-                <p className="mt-2 text-sm leading-6 text-black/65">{item.description}</p>
+                <p className="mt-3 font-display text-sm font-bold leading-tight text-black sm:text-lg">
+                  {item.title}
+                </p>
+                <p className="mt-2 hidden text-sm leading-6 text-black/65 md:block">
+                  {item.description}
+                </p>
               </div>
             );
           })}
@@ -57,7 +61,7 @@ function Home() {
         "https://images.unsplash.com/photo-1513258496099-48168024aec0?auto=format&fit=crop&w=1400&q=80",
       imageCaption: "Pre-KG to UKG journey",
       content: (
-        <div className="grid gap-3 md:grid-cols-3">
+        <div className="grid grid-cols-2 gap-3 md:grid-cols-3">
           {programs.map((item) => {
             const Icon = item.icon;
             return (
@@ -65,8 +69,12 @@ function Home() {
                 <div className="flex h-9 w-9 items-center justify-center rounded-2xl bg-black text-white">
                   <Icon fontSize="small" />
                 </div>
-                <p className="mt-3 font-display text-base font-bold text-black sm:text-lg">{item.title}</p>
-                <p className="mt-2 text-sm leading-6 text-black/65">{item.description}</p>
+                <p className="mt-3 font-display text-sm font-bold leading-tight text-black sm:text-lg">
+                  {item.title}
+                </p>
+                <p className="mt-2 hidden text-sm leading-6 text-black/65 md:block">
+                  {item.description}
+                </p>
               </div>
             );
           })}
@@ -83,20 +91,20 @@ function Home() {
         "https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&w=1400&q=80",
       imageCaption: "Personal support and guided growth",
       content: (
-        <div className="space-y-3">
+        <div className="grid grid-cols-2 gap-3">
           {highlights.map((item) => {
             const Icon = item.icon;
             return (
               <div key={item.title} className="rounded-[1.1rem] border border-black/8 bg-white p-3 sm:p-4">
-                <div className="flex items-start gap-3">
-                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl bg-[#d91f26] text-white">
-                    <Icon fontSize="small" />
-                  </div>
-                  <div>
-                    <p className="font-display text-base font-bold text-black sm:text-lg">{item.title}</p>
-                    <p className="mt-2 text-sm leading-6 text-black/65">{item.description}</p>
-                  </div>
+                <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-[#d91f26] text-white">
+                  <Icon fontSize="small" />
                 </div>
+                <p className="mt-3 font-display text-sm font-bold leading-tight text-black sm:text-lg">
+                  {item.title}
+                </p>
+                <p className="mt-2 hidden text-sm leading-6 text-black/65 md:block">
+                  {item.description}
+                </p>
               </div>
             );
           })}
@@ -113,7 +121,7 @@ function Home() {
         "https://images.unsplash.com/photo-1588072432836-e10032774350?auto=format&fit=crop&w=1400&q=80",
       imageCaption: "Campus designed for children",
       content: (
-        <div className="grid gap-3 sm:grid-cols-3">
+        <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
           {facilities.map((item) => {
             const Icon = item.icon;
             return (
@@ -121,8 +129,12 @@ function Home() {
                 <div className="flex h-9 w-9 items-center justify-center rounded-2xl bg-black text-white">
                   <Icon fontSize="small" />
                 </div>
-                <p className="mt-3 font-display text-sm font-bold text-black sm:text-base">{item.title}</p>
-                <p className="mt-2 text-sm leading-6 text-black/65">{item.description}</p>
+                <p className="mt-3 font-display text-sm font-bold leading-tight text-black sm:text-base">
+                  {item.title}
+                </p>
+                <p className="mt-2 hidden text-sm leading-6 text-black/65 md:block">
+                  {item.description}
+                </p>
               </div>
             );
           })}
@@ -139,18 +151,20 @@ function Home() {
         "https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=1400&q=80",
       imageCaption: "Creative and active school life",
       content: (
-        <div className="space-y-3">
+        <div className="grid grid-cols-2 gap-3">
           {activities.map((item) => {
             const Icon = item.icon;
             return (
-              <div key={item.title} className="flex items-start gap-3 rounded-[1.1rem] border border-black/8 bg-white p-3 sm:p-4">
-                <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-2xl bg-[#d91f26] text-white">
+              <div key={item.title} className="rounded-[1.1rem] border border-black/8 bg-white p-3 sm:p-4">
+                <div className="flex h-9 w-9 items-center justify-center rounded-2xl bg-[#d91f26] text-white">
                   <Icon fontSize="small" />
                 </div>
-                <div>
-                  <p className="font-display text-base font-bold text-black sm:text-lg">{item.title}</p>
-                  <p className="mt-2 text-sm leading-6 text-black/65">{item.description}</p>
-                </div>
+                <p className="mt-3 font-display text-sm font-bold leading-tight text-black sm:text-lg">
+                  {item.title}
+                </p>
+                <p className="mt-2 hidden text-sm leading-6 text-black/65 md:block">
+                  {item.description}
+                </p>
               </div>
             );
           })}
@@ -167,7 +181,7 @@ function Home() {
         "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&w=1400&q=80",
       imageCaption: "Consistent daily rhythm",
       content: (
-        <div className="grid gap-3 sm:grid-cols-2">
+        <div className="grid grid-cols-2 gap-3">
           {schedule.map((item) => {
             const Icon = item.icon;
             return (
@@ -175,9 +189,15 @@ function Home() {
                 <div className="flex h-9 w-9 items-center justify-center rounded-2xl bg-black text-white">
                   <Icon fontSize="small" />
                 </div>
-                <p className="mt-3 text-[11px] font-extrabold uppercase tracking-[0.18em] text-[#d91f26]">{item.time}</p>
-                <p className="mt-2 font-display text-base font-bold text-black sm:text-lg">{item.title}</p>
-                <p className="mt-2 text-sm leading-6 text-black/65">{item.detail}</p>
+                <p className="mt-3 text-[11px] font-extrabold uppercase tracking-[0.18em] text-[#d91f26]">
+                  {item.time}
+                </p>
+                <p className="mt-2 font-display text-sm font-bold leading-tight text-black sm:text-lg">
+                  {item.title}
+                </p>
+                <p className="mt-2 hidden text-sm leading-6 text-black/65 md:block">
+                  {item.detail}
+                </p>
               </div>
             );
           })}

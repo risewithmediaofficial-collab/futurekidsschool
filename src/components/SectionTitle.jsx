@@ -9,7 +9,7 @@ function SectionTitle({ badge, title, description, align = "center" }) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.35 }}
       transition={{ duration: 0.7, ease: "easeOut" }}
-      className={`mx-auto mb-10 flex max-w-3xl flex-col gap-3 ${alignment}`}
+      className={`mx-auto mb-8 flex max-w-3xl flex-col gap-3 ${alignment} md:mb-10`}
     >
       {badge ? (
         <span className="accent-pill">
@@ -17,11 +17,13 @@ function SectionTitle({ badge, title, description, align = "center" }) {
           {badge}
         </span>
       ) : null}
-      <h2 className="font-display text-4xl font-extrabold leading-tight text-black md:text-5xl">
+      <h2 className="font-display text-3xl font-bold leading-[1.05] text-black md:text-4xl lg:text-5xl">
         {title}
       </h2>
       {description ? (
-        <p className="text-base leading-8 text-black/65 md:text-lg">{description}</p>
+        <p className="max-w-2xl text-sm leading-7 text-black/65 md:text-base md:leading-8 lg:text-lg">
+          {description}
+        </p>
       ) : null}
     </motion.div>
   );
