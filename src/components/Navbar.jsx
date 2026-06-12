@@ -50,11 +50,11 @@ function Navbar() {
             <SchoolIcon fontSize="medium" />
           </div>
           <div className="min-w-0">
-            <p className="font-display text-[clamp(1.45rem,7vw,1.85rem)] font-bold leading-none text-black">
-              Future Kids
+            <p className="font-display text-[clamp(1.1rem,5vw,1.5rem)] font-bold leading-none text-black">
+              Future Kids Kindergarten
             </p>
-            <p className="text-[10px] font-extrabold uppercase tracking-[0.2em] text-[#d91f26] sm:text-[11px] sm:tracking-[0.24em]">
-              School
+            <p className="text-[9px] font-extrabold uppercase tracking-[0.18em] text-[#ef5b3f] sm:text-[10px]">
+              A Unit of Future School (CBSE)
             </p>
           </div>
         </NavLink>

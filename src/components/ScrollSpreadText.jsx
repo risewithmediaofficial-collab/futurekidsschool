@@ -66,6 +66,8 @@ function CharacterImage({
     <motion.img
       src={src}
       alt=""
+      loading="lazy"
+      decoding="async"
       className={joinClasses("inline-block rounded-[1.5rem] object-cover", imageClassName)}
       style={{
         x,

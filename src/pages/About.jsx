@@ -7,30 +7,30 @@ import { ScrollSpreadText } from "../components/ScrollSpreadText";
 import { aboutCards, faqs, features, values } from "../data/schoolData";
 
 const aboutImage =
-  "https://images.unsplash.com/photo-1588072432904-843af37f03ed?auto=format&fit=crop&w=1600&q=80";
+  "https://images.unsplash.com/photo-1588072432904-843af37f03ed?auto=format&fit=crop&w=1100&q=75";
 
 const teamImage =
-  "https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=1600&q=80";
+  "https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=1100&q=75";
 
 function About() {
   const aboutStickyCards = [
     {
       id: "values",
       eyebrow: "Our Values",
-      title: "The values that shape every school day.",
+      title: "The values that shape every school day at Future Kids.",
       description:
-        "These ideas guide how we teach, support children, and build trust with parents from the very first interaction.",
+        "Nurture, explore, and belong — these ideas guide how we teach, support children, and build trust with parents from the very first interaction.",
       image:
-        "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1400&q=80",
+        "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=900&q=70",
       imageCaption: "Warm, child-first culture",
       content: (
-        <div className="grid grid-cols-2 gap-3 md:grid-cols-3">
+        <div className="grid grid-cols-3 gap-2 sm:gap-3">
           {values.map((item) => (
-            <div key={item.title} className="rounded-[1.1rem] border border-black/8 bg-white p-3 sm:p-4">
-              <p className="text-[11px] font-extrabold uppercase tracking-[0.18em] text-[#d91f26]">
+            <div key={item.title} className="rounded-[1.1rem] border border-black/8 bg-white p-2 sm:p-4">
+              <p className="text-[9px] sm:text-[11px] font-extrabold uppercase tracking-[0.18em] text-[#d91f26]">
                 {item.title}
               </p>
-              <p className="mt-2 font-display text-sm font-bold leading-tight text-black sm:text-lg">
+              <p className="mt-1 sm:mt-2 font-display text-[12px] sm:text-base md:text-lg font-bold leading-tight text-black">
                 {item.title}
               </p>
               <p className="mt-2 hidden text-sm leading-6 text-black/65 md:block">
@@ -44,22 +44,22 @@ function About() {
     {
       id: "features",
       eyebrow: "School Features",
-      title: "The systems and spaces behind a better learning experience.",
+      title: "Activity-based learning with a safe, child-friendly environment.",
       description:
-        "Future Kids School combines modern classroom expectations with a child-friendly environment built around comfort and confidence.",
+        "Future Kids Kindergarten School combines fun, interactive classrooms with a creative play area and dedicated teachers to build a strong early childhood foundation.",
       image:
-        "https://images.unsplash.com/photo-1588072432836-e10032774350?auto=format&fit=crop&w=1400&q=80",
+        "https://images.unsplash.com/photo-1588072432836-e10032774350?auto=format&fit=crop&w=900&q=70",
       imageCaption: "Modern classrooms and care",
       content: (
-        <div className="grid grid-cols-2 gap-3 md:grid-cols-4">
+        <div className="grid grid-cols-2 gap-2 sm:gap-3 md:grid-cols-4">
           {features.map((item) => {
             const Icon = item.icon;
             return (
-              <div key={item.title} className="rounded-[1.1rem] border border-black/8 bg-white p-3 sm:p-4">
-                <div className="flex h-9 w-9 items-center justify-center rounded-2xl bg-[#d91f26] text-white">
-                  <Icon fontSize="small" />
+              <div key={item.title} className="rounded-[1.1rem] border border-black/8 bg-white p-2 sm:p-4">
+                <div className="flex h-7 w-7 sm:h-9 sm:w-9 items-center justify-center rounded-[0.8rem] sm:rounded-2xl bg-[#d91f26] text-white">
+                  <Icon className="scale-75 sm:scale-100" fontSize="small" />
                 </div>
-                <p className="mt-3 font-display text-sm font-bold leading-tight text-black sm:text-base">
+                <p className="mt-2 sm:mt-3 font-display text-xs sm:text-sm md:text-base font-bold leading-tight text-black">
                   {item.title}
                 </p>
                 <p className="mt-2 hidden text-sm leading-6 text-black/65 md:block">
@@ -86,19 +86,20 @@ function About() {
           src={aboutImage}
           alt="Children learning together"
           className="absolute inset-0 h-full w-full object-cover opacity-35"
+          fetchpriority="high"
+          decoding="async"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black via-black/90 to-black/55" />
         <div className="page-shell-wide relative">
           <span className="accent-pill bg-white/10 text-white">
             <span className="red-dot bg-white" />
-            About Future Kids School
+            About Future Kids Kindergarten School
           </span>
           <h1 className="mt-5 max-w-4xl font-display text-balance text-4xl font-bold leading-[1] text-white md:text-6xl">
-            A child-first school experience with modern structure and heart.
+            A warm, engaging school where young children blossom every day.
           </h1>
           <p className="mt-5 max-w-2xl text-base leading-8 text-white/75 md:text-lg">
-            Future Kids School is built to give young learners a strong foundation
-            through warmth, routine, creativity, and age-appropriate guidance.
+            Future Kids Kindergarten School is a unit of Future School (CBSE), Solur — built to give young learners a strong foundation through warmth, routine, creativity, and age-appropriate guidance.
           </p>
         </div>
       </section>
@@ -108,8 +109,8 @@ function About() {
           <div>
             <SectionTitle
               badge="Our Story"
-              title="A safe start for every child."
-              description="We built the school experience around emotional comfort, joyful learning, and clear parent communication."
+              title="A joyful beginning for every child."
+              description="At Future Kids Kindergarten School, we create a warm and engaging environment where young children enjoy learning every day."
               align="left"
             />
             <div className="grid gap-4 sm:grid-cols-2">
@@ -122,13 +123,13 @@ function About() {
           </div>
 
           <div className="image-frame aspect-[4/3] rounded-[1.5rem]">
-            <img src={aboutImage} alt="Children learning with teacher support" />
+            <img src={aboutImage} alt="Children learning with teacher support" loading="lazy" decoding="async" />
           </div>
         </div>
       </section>
 
       <ScrollSpreadText
-        text="safe joyful creative"
+        text="activity based joyful creative learning"
         className="font-display whitespace-nowrap text-[clamp(1.25rem,4.8vw,2rem)] font-bold uppercase tracking-tight md:text-5xl"
         charClassName="text-black"
         heightClassName="min-h-[150px] py-4 md:min-h-[320px] md:py-12"
@@ -142,9 +143,7 @@ function About() {
             </div>
             <p className="mt-5 font-display text-2xl font-bold text-black md:text-3xl">Our Mission</p>
             <p className="mt-3 text-sm leading-7 text-black/65 md:text-base md:leading-8">
-              To provide a safe, joyful, and engaging learning environment where
-              children develop communication, creativity, social confidence, and
-              strong early school habits.
+              To provide a safe, joyful, and engaging learning environment where children develop communication, creativity, social confidence, and strong early school habits through activity-based education.
             </p>
           </div>
 
@@ -154,8 +153,7 @@ function About() {
             </div>
             <p className="mt-5 font-display text-2xl font-bold text-black md:text-3xl">Our Vision</p>
             <p className="mt-3 text-sm leading-7 text-black/65 md:text-base md:leading-8">
-              To become a trusted early-learning school that helps every child
-              begin their education with confidence, curiosity, and care.
+              To become the most trusted kindergarten school in Ambur that helps every child begin their education with confidence, curiosity, care, and a love for learning.
             </p>
           </div>
         </div>
@@ -171,16 +169,16 @@ function About() {
             <SectionTitle
               badge="Our Team"
               title="Teachers who lead with care, structure, and patience."
-              description="Our placeholder team approach centers on emotional safety, guided learning, and healthy parent communication."
+              description="Our dedicated and caring teachers guide children with patience, warmth, and a deep understanding of early childhood development."
               align="left"
             />
             <p className="text-sm leading-7 text-black/65 md:text-base md:leading-8">
               We believe the best early-learning environments are built by adults
-              who understand both the academic and emotional needs of young children.
+              who genuinely care about both the academic and emotional needs of young children.
             </p>
           </div>
           <div className="image-frame aspect-[4/3] rounded-[1.5rem]">
-            <img src={teamImage} alt="Teacher with students in a classroom" />
+            <img src={teamImage} alt="Teacher with students in a classroom" loading="lazy" decoding="async" />
           </div>
         </div>
       </section>
@@ -188,8 +186,8 @@ function About() {
       <section className="page-shell py-10 md:py-14">
         <SectionTitle
           badge="FAQs"
-          title="Common questions parents may ask."
-          description="These placeholder answers can be expanded later with real admission and policy details."
+          title="Common questions about admissions and programs."
+          description="Here are answers to frequently asked questions by parents about Future Kids Kindergarten School."
         />
         <div className="space-y-4">
           {faqs.map((item) => (

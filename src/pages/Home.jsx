@@ -19,34 +19,35 @@ import {
 
 const heroImage = heroSchoolImage;
 
-const heroWords = ["A", "clean,", "modern", "school", "website", "built", "for", "bright", "beginnings."];
-const heroHighlights = ["Play-based curriculum", "Safe campus support", "Experienced teachers"];
+const heroWords = ["Future", "Kids", "Kindergarten", "School"];
+const heroTagline = "Where Little Minds Blossom into Bright Futures!";
+const heroHighlights = ["Activity-based learning", "Safe campus environment", "Admissions Open 2026–27"];
 const statColors = ["#ef5b3f", "#27b3a8", "#ffb628", "#211c4f"];
 
 function Home() {
   const stickySections = [
     {
       id: "why-choose",
-      eyebrow: "Why Choose Us",
-      title: "A modern school experience with warmth, safety, and structure.",
+      eyebrow: "Why Choose Future Kids?",
+      title: "Fun, safe, and skill-focused learning for every young child.",
       description:
-        "Everything from classroom flow to teacher care is designed to help children feel comfortable, supported, and excited to learn every day.",
+        "From interactive classrooms to a creative play area, everything at Future Kids Kindergarten School is designed to help children grow with confidence, curiosity, and joy.",
       image:
-        "https://images.unsplash.com/photo-1588072432904-843af37f03ed?auto=format&fit=crop&w=1400&q=80",
+        "https://images.unsplash.com/photo-1588072432904-843af37f03ed?auto=format&fit=crop&w=900&q=70",
       imageCaption: "Safe, guided classroom learning",
       content: (
-        <div className="grid grid-cols-2 gap-3 sm:grid-cols-2">
+        <div className="grid grid-cols-2 gap-2 sm:gap-3">
           {features.map((item) => {
             const Icon = item.icon;
             return (
               <div
                 key={item.title}
-                className="rounded-[1.6rem] border border-[#211c4f]/8 bg-white p-3 shadow-[0_18px_35px_rgba(33,28,79,0.08)] sm:p-4"
+                className="rounded-[1.2rem] sm:rounded-[1.6rem] border border-[#211c4f]/8 bg-white p-2 sm:p-4 shadow-[0_18px_35px_rgba(33,28,79,0.08)]"
               >
-                <div className="flex h-10 w-10 items-center justify-center rounded-[1.1rem] bg-[#ef5b3f] text-white shadow-[0_10px_20px_rgba(239,91,63,0.24)]">
-                  <Icon fontSize="small" />
+                <div className="flex h-7 w-7 sm:h-10 sm:w-10 items-center justify-center rounded-[0.8rem] sm:rounded-[1.1rem] bg-[#ef5b3f] text-white shadow-[0_10px_20px_rgba(239,91,63,0.24)]">
+                  <Icon className="scale-75 sm:scale-100" fontSize="small" />
                 </div>
-                <p className="mt-3 font-display text-sm font-bold leading-tight text-[#211c4f] sm:text-lg">
+                <p className="mt-2 sm:mt-3 font-display text-[12px] sm:text-base md:text-lg font-bold leading-tight text-[#211c4f]">
                   {item.title}
                 </p>
                 <p className="mt-2 hidden text-sm leading-6 text-[#2e2a4d]/70 md:block">
@@ -60,28 +61,33 @@ function Home() {
     },
     {
       id: "programs",
-      eyebrow: "Programs",
+      eyebrow: "Our Programs",
       title: "Three learning stages built for strong early foundations.",
       description:
-        "Each level supports age-appropriate development in communication, confidence, routines, creativity, and classroom readiness.",
+        "Pre-KG, Jr. KG, and Sr. KG — each level supports age-appropriate development in communication, confidence, creativity, and classroom readiness.",
       image:
-        "https://images.unsplash.com/photo-1513258496099-48168024aec0?auto=format&fit=crop&w=1400&q=80",
+        "https://images.unsplash.com/photo-1513258496099-48168024aec0?auto=format&fit=crop&w=900&q=70",
       imageCaption: "Pre-KG to UKG journey",
       content: (
-        <div className="grid grid-cols-2 gap-3 md:grid-cols-3">
+        <div className="grid grid-cols-3 gap-2 sm:gap-3">
           {programs.map((item) => {
             const Icon = item.icon;
             return (
               <div
                 key={item.title}
-                className="rounded-[1.6rem] border border-[#211c4f]/8 bg-white p-3 shadow-[0_18px_35px_rgba(33,28,79,0.08)] sm:p-4"
+                className="rounded-[1.2rem] sm:rounded-[1.6rem] border border-[#211c4f]/8 bg-white p-2 sm:p-4 shadow-[0_18px_35px_rgba(33,28,79,0.08)]"
               >
-                <div className="flex h-9 w-9 items-center justify-center rounded-[1rem] bg-[#211c4f] text-white shadow-[0_10px_20px_rgba(33,28,79,0.24)]">
-                  <Icon fontSize="small" />
+                <div className="flex h-7 w-7 sm:h-9 sm:w-9 items-center justify-center rounded-[0.8rem] sm:rounded-[1rem] bg-[#211c4f] text-white shadow-[0_10px_20px_rgba(33,28,79,0.24)]">
+                  <Icon className="scale-75 sm:scale-100" fontSize="small" />
                 </div>
-                <p className="mt-3 font-display text-sm font-bold leading-tight text-[#211c4f] sm:text-lg">
+                <p className="mt-2 sm:mt-3 font-display text-[12px] sm:text-base md:text-lg font-bold leading-tight text-[#211c4f]">
                   {item.title}
                 </p>
+                {item.ageGroup && (
+                  <p className="mt-1 text-[9px] sm:text-[11px] font-extrabold uppercase tracking-[0.14em] text-[#ef5b3f]">
+                    {item.ageGroup}
+                  </p>
+                )}
                 <p className="mt-2 hidden text-sm leading-6 text-[#2e2a4d]/70 md:block">
                   {item.description}
                 </p>
@@ -93,26 +99,26 @@ function Home() {
     },
     {
       id: "support",
-      eyebrow: "Learning Support",
-      title: "Inspire growth through thoughtful daily routines.",
+      eyebrow: "Skill Development",
+      title: "Building communication, creativity, and confidence every day.",
       description:
-        "Teacher attention, structured classroom time, and child-friendly support systems help every learner settle in, participate, and progress confidently.",
+        "Our dedicated teachers and activity-based approach help every child improve communication, creativity, and confidence through joyful, structured daily routines.",
       image:
-        "https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&w=1400&q=80",
+        "https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&w=900&q=70",
       imageCaption: "Personal support and guided growth",
       content: (
-        <div className="grid grid-cols-2 gap-3">
+        <div className="grid grid-cols-3 gap-2 sm:gap-3">
           {highlights.map((item) => {
             const Icon = item.icon;
             return (
               <div
                 key={item.title}
-                className="rounded-[1.6rem] border border-[#211c4f]/8 bg-white p-3 shadow-[0_18px_35px_rgba(33,28,79,0.08)] sm:p-4"
+                className="rounded-[1.2rem] sm:rounded-[1.6rem] border border-[#211c4f]/8 bg-white p-2 sm:p-4 shadow-[0_18px_35px_rgba(33,28,79,0.08)]"
               >
-                <div className="flex h-10 w-10 items-center justify-center rounded-[1.1rem] bg-[#27b3a8] text-white shadow-[0_10px_20px_rgba(39,179,168,0.24)]">
-                  <Icon fontSize="small" />
+                <div className="flex h-7 w-7 sm:h-10 sm:w-10 items-center justify-center rounded-[0.8rem] sm:rounded-[1.1rem] bg-[#27b3a8] text-white shadow-[0_10px_20px_rgba(39,179,168,0.24)]">
+                  <Icon className="scale-75 sm:scale-100" fontSize="small" />
                 </div>
-                <p className="mt-3 font-display text-sm font-bold leading-tight text-[#211c4f] sm:text-lg">
+                <p className="mt-2 sm:mt-3 font-display text-[12px] sm:text-base md:text-lg font-bold leading-tight text-[#211c4f]">
                   {item.title}
                 </p>
                 <p className="mt-2 hidden text-sm leading-6 text-[#2e2a4d]/70 md:block">
@@ -127,25 +133,25 @@ function Home() {
     {
       id: "facilities",
       eyebrow: "Facilities",
-      title: "Safe spaces and caring people behind every school day.",
+      title: "Creative play area, safe classrooms, and caring teachers.",
       description:
-        "Parents can expect bright classrooms, active play, and teacher support built around early childhood needs and comfort.",
+        "Parents can expect bright interactive classrooms, an active creative play area, and dedicated teacher support built around early childhood comfort and growth.",
       image:
-        "https://images.unsplash.com/photo-1588072432836-e10032774350?auto=format&fit=crop&w=1400&q=80",
+        "https://images.unsplash.com/photo-1588072432836-e10032774350?auto=format&fit=crop&w=900&q=70",
       imageCaption: "Campus designed for children",
       content: (
-        <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
+        <div className="grid grid-cols-3 gap-2 sm:gap-3">
           {facilities.map((item) => {
             const Icon = item.icon;
             return (
               <div
                 key={item.title}
-                className="rounded-[1.6rem] border border-[#211c4f]/8 bg-white p-3 shadow-[0_18px_35px_rgba(33,28,79,0.08)] sm:p-4"
+                className="rounded-[1.2rem] sm:rounded-[1.6rem] border border-[#211c4f]/8 bg-white p-2 sm:p-4 shadow-[0_18px_35px_rgba(33,28,79,0.08)]"
               >
-                <div className="flex h-9 w-9 items-center justify-center rounded-[1rem] bg-[#ffb628] text-white shadow-[0_10px_20px_rgba(255,182,40,0.24)]">
-                  <Icon fontSize="small" />
+                <div className="flex h-7 w-7 sm:h-9 sm:w-9 items-center justify-center rounded-[0.8rem] sm:rounded-[1rem] bg-[#ffb628] text-white shadow-[0_10px_20px_rgba(255,182,40,0.24)]">
+                  <Icon className="scale-75 sm:scale-100" fontSize="small" />
                 </div>
-                <p className="mt-3 font-display text-sm font-bold leading-tight text-[#211c4f] sm:text-base">
+                <p className="mt-2 sm:mt-3 font-display text-[12px] sm:text-base font-bold leading-tight text-[#211c4f]">
                   {item.title}
                 </p>
                 <p className="mt-2 hidden text-sm leading-6 text-[#2e2a4d]/70 md:block">
@@ -164,21 +170,21 @@ function Home() {
       description:
         "Creative, physical, and cognitive activities keep children engaged across the full week and help them grow holistically.",
       image:
-        "https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=1400&q=80",
+        "https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=900&q=70",
       imageCaption: "Creative and active school life",
       content: (
-        <div className="grid grid-cols-2 gap-3">
+        <div className="grid grid-cols-3 gap-2 sm:gap-3">
           {activities.map((item) => {
             const Icon = item.icon;
             return (
               <div
                 key={item.title}
-                className="rounded-[1.6rem] border border-[#211c4f]/8 bg-white p-3 shadow-[0_18px_35px_rgba(33,28,79,0.08)] sm:p-4"
+                className="rounded-[1.2rem] sm:rounded-[1.6rem] border border-[#211c4f]/8 bg-white p-2 sm:p-4 shadow-[0_18px_35px_rgba(33,28,79,0.08)]"
               >
-                <div className="flex h-9 w-9 items-center justify-center rounded-[1rem] bg-[#ef5b3f] text-white shadow-[0_10px_20px_rgba(239,91,63,0.24)]">
-                  <Icon fontSize="small" />
+                <div className="flex h-7 w-7 sm:h-9 sm:w-9 items-center justify-center rounded-[0.8rem] sm:rounded-[1rem] bg-[#ef5b3f] text-white shadow-[0_10px_20px_rgba(239,91,63,0.24)]">
+                  <Icon className="scale-75 sm:scale-100" fontSize="small" />
                 </div>
-                <p className="mt-3 font-display text-sm font-bold leading-tight text-[#211c4f] sm:text-lg">
+                <p className="mt-2 sm:mt-3 font-display text-[12px] sm:text-base md:text-lg font-bold leading-tight text-[#211c4f]">
                   {item.title}
                 </p>
                 <p className="mt-2 hidden text-sm leading-6 text-[#2e2a4d]/70 md:block">
@@ -197,24 +203,24 @@ function Home() {
       description:
         "Consistent timing helps children settle into learning, play, and transition routines with comfort and confidence.",
       image:
-        "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&w=1400&q=80",
+        "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&w=900&q=70",
       imageCaption: "Consistent daily rhythm",
       content: (
-        <div className="grid grid-cols-2 gap-3">
+        <div className="grid grid-cols-2 gap-2 sm:gap-3">
           {schedule.map((item) => {
             const Icon = item.icon;
             return (
               <div
                 key={item.title}
-                className="rounded-[1.6rem] border border-[#211c4f]/8 bg-white p-3 shadow-[0_18px_35px_rgba(33,28,79,0.08)] sm:p-4"
+                className="rounded-[1.2rem] sm:rounded-[1.6rem] border border-[#211c4f]/8 bg-white p-2 sm:p-4 shadow-[0_18px_35px_rgba(33,28,79,0.08)]"
               >
-                <div className="flex h-9 w-9 items-center justify-center rounded-[1rem] bg-[#211c4f] text-white shadow-[0_10px_20px_rgba(33,28,79,0.24)]">
-                  <Icon fontSize="small" />
+                <div className="flex h-7 w-7 sm:h-9 sm:w-9 items-center justify-center rounded-[0.8rem] sm:rounded-[1rem] bg-[#211c4f] text-white shadow-[0_10px_20px_rgba(33,28,79,0.24)]">
+                  <Icon className="scale-75 sm:scale-100" fontSize="small" />
                 </div>
-                <p className="mt-3 text-[11px] font-extrabold uppercase tracking-[0.18em] text-[#ef5b3f]">
+                <p className="mt-2 text-[9px] sm:text-[11px] font-extrabold uppercase tracking-[0.18em] text-[#ef5b3f]">
                   {item.time}
                 </p>
-                <p className="mt-2 font-display text-sm font-bold leading-tight text-[#211c4f] sm:text-lg">
+                <p className="mt-1 font-display text-[12px] sm:text-base md:text-lg font-bold leading-tight text-[#211c4f]">
                   {item.title}
                 </p>
                 <p className="mt-2 hidden text-sm leading-6 text-[#2e2a4d]/70 md:block">
@@ -253,6 +259,8 @@ function Home() {
           src={heroImage}
           alt="Kids in a bright classroom"
           className="absolute inset-y-0 right-0 h-full w-full object-cover object-center md:w-[54%]"
+          fetchpriority="high"
+          decoding="async"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-[#fffaf2] via-[#fffaf2]/92 to-[#fffaf2]/20" />
         <div className="absolute inset-y-0 right-0 hidden w-[54%] bg-gradient-to-l from-[#211c4f]/24 via-transparent to-transparent md:block" />
@@ -279,14 +287,40 @@ function Home() {
             </div>
 
             <motion.p
+              initial={{ opacity: 0, y: 14 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.45, ease: "easeOut" }}
+              className="mt-2 text-sm font-semibold uppercase tracking-widest text-[#ef5b3f]"
+            >
+              A Unit of Future School (CBSE) – Solur
+            </motion.p>
+
+            <motion.p
+              initial={{ opacity: 0, y: 14 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.5, ease: "easeOut" }}
+              className="mt-2 text-base font-semibold italic text-[#211c4f]/70"
+            >
+              {heroTagline}
+            </motion.p>
+
+            <motion.div
+              initial={{ opacity: 0, y: 14 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.52, ease: "easeOut" }}
+              className="mt-3 inline-flex items-center gap-2 rounded-full bg-[#ef5b3f]/10 px-4 py-2 text-sm font-bold text-[#ef5b3f]"
+            >
+              <span className="h-2 w-2 animate-pulse rounded-full bg-[#ef5b3f]" />
+              Admissions Open for 2026 – 27
+            </motion.div>
+
+            <motion.p
               initial={{ opacity: 0, y: 28 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.55, ease: "easeOut" }}
               className="mt-4 max-w-2xl text-base leading-7 text-[#2e2a4d]/75 md:text-[1.02rem]"
             >
-              Future Kids School combines trusted care, joyful classrooms, and a
-              modern early-learning experience for parents who want safety,
-              structure, and growth in one place.
+              Give your child a safe, creative, and fun-filled learning environment where they can grow with confidence, curiosity, and happiness.
             </motion.p>
 
             <motion.div
@@ -299,14 +333,14 @@ function Home() {
                 to="/contact"
                 className="inline-flex items-center justify-center gap-2 rounded-full bg-[#ef5b3f] px-6 py-3.5 font-bold text-white shadow-[0_16px_30px_rgba(239,91,63,0.28)] transition hover:bg-[#211c4f]"
               >
-                Book Admission
+                Apply for Admission
                 <ArrowForwardRoundedIcon fontSize="small" />
               </Link>
               <Link
-                to="/about"
+                to="/contact"
                 className="inline-flex items-center justify-center rounded-full border border-[#211c4f]/10 bg-white/92 px-6 py-3.5 font-bold text-[#211c4f] shadow-[0_14px_28px_rgba(33,28,79,0.08)] transition hover:border-[#27b3a8] hover:text-[#27b3a8]"
               >
-                Explore School
+                Contact Us
               </Link>
             </motion.div>
 
@@ -339,6 +373,8 @@ function Home() {
               <img
                 src={titleBandImage}
                 alt="School illustration"
+                loading="lazy"
+                decoding="async"
                 className="aspect-square w-full rounded-[36%_64%_58%_42%/45%_38%_62%_55%] object-cover"
               />
             </motion.div>
@@ -353,6 +389,8 @@ function Home() {
               <img
                 src={admissionVisitImage}
                 alt="Children on campus"
+                loading="lazy"
+                decoding="async"
                 className="h-[220px] w-full rounded-[1.6rem_1.6rem_2.1rem_1.4rem] object-cover lg:h-[245px]"
               />
               <div className="mt-3 flex items-end justify-between gap-3">
@@ -389,12 +427,12 @@ function Home() {
       </section>
 
       <ScrollSpreadText
-        text="future kids school"
+        text="future kids kindergarten school ambur"
         className="font-display whitespace-nowrap text-[clamp(1.35rem,7.2vw,3rem)] font-bold uppercase tracking-tight"
         charClassName="text-[#ef5b3f]"
         heightClassName="min-h-[180px] py-6 md:min-h-[300px] md:py-12"
         backgroundImage={titleBandImage}
-        backgroundAlt="Blurred school building background"
+        backgroundAlt="Future Kids Kindergarten School Ambur"
         overlayClassName="bg-[#fffaf2]/48"
         backgroundBlurClassName="blur-[1.5px]"
       />
@@ -417,14 +455,13 @@ function Home() {
             <div>
               <span className="accent-pill bg-white/10 text-white">
                 <span className="red-dot bg-white" />
-                Admissions Open
+                Admissions Open for 2026 – 27
               </span>
               <h3 className="mt-4 font-display text-3xl font-bold text-white md:text-4xl">
-                Book an admission visit for your child.
+                Enroll your child today and give them the perfect start to their learning journey.
               </h3>
               <p className="mt-4 max-w-2xl text-base leading-8 text-white/75">
-                Speak with our team, visit the campus, and explore how Future Kids
-                School can support your child&apos;s early learning journey.
+                Early Bird Discount Available — Speak with our team, visit the campus, and explore how Future Kids Kindergarten School can give your child the best beginning.
               </p>
               <Link
                 to="/contact"
@@ -437,6 +474,8 @@ function Home() {
               <img
                 src={admissionVisitImage}
                 alt="Children outside the school campus"
+                loading="lazy"
+                decoding="async"
                 className="h-full w-full rounded-[1.8rem_1.8rem_2.4rem_1.6rem] object-cover"
               />
             </div>

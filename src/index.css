@@ -298,3 +298,61 @@ textarea {
     width: min(100%, calc(100% - 0.75rem));
   }
 }
+
+/* ─── Performance & smoothness ─────────────────────────── */
+
+/* GPU-composite layers for animated elements */
+.playful-frame,
+[class*="motion"],
+.theme-orb {
+  will-change: transform;
+  transform: translateZ(0);
+}
+
+/* Contain layout for large sections to reduce repaints */
+.full-bleed-section,
+.section-surface,
+.section-card {
+  contain: layout style;
+}
+
+/* Smooth image rendering */
+img {
+  image-rendering: auto;
+  transform: translateZ(0);
+}
+
+/* Faster, smoother transitions on all interactive elements */
+a,
+button,
+[class*="transition"] {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 220ms;
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Scrollbar hide for card inner scroll */
+.overflow-y-auto::-webkit-scrollbar {
+  display: none;
+}
+.overflow-y-auto {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Prevent content overflow in sticky cards */
+.section-surface > * {
+  min-width: 0;
+}
+
