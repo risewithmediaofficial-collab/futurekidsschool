@@ -159,7 +159,7 @@ export const schedule = [
     icon: PaletteIcon,
   },
   {
-    time: "1:00 PM",
+    time: "3:00 PM",
     title: "Home Time",
     detail: "Reflection, parent handover, and a calm end-of-day routine for every child.",
     icon: FavoriteIcon,
@@ -241,7 +241,7 @@ export const contactDetails = [
   },
   {
     label: "Working Hours",
-    value: "Monday to Saturday, 9:00 AM – 1:00 PM",
+    value: "Monday to Saturday, 9:00 AM – 4:00 PM",
     note: "School & office hours",
   },
 ];
