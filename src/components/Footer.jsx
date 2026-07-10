@@ -2,6 +2,7 @@ import SchoolIcon from "@mui/icons-material/School";
 import PhoneIcon from "@mui/icons-material/Phone";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import { NavLink } from "react-router-dom";
+import logo from "../assets/logo.jpeg";
 
 function Footer() {
   return (
@@ -11,9 +12,7 @@ function Footer() {
           {/* Brand */}
           <div>
             <div className="flex items-center gap-3">
-              <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#ef5b3f] text-white">
-                <SchoolIcon />
-              </div>
+              <img src={logo} alt="Future Kids Kindergarten Logo" className="h-12 w-12 shrink-0 rounded-2xl object-cover" />
               <div>
                 <p className="font-display text-xl font-extrabold leading-tight">Future Kids Kindergarten School</p>
                 <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-[#ef5b3f]">

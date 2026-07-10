@@ -9,6 +9,7 @@ import Footer from "./components/Footer";
 const Home = lazy(() => import("./pages/Home"));
 const About = lazy(() => import("./pages/About"));
 const Contact = lazy(() => import("./pages/Contact"));
+const Events = lazy(() => import("./pages/Events"));
 
 function PageLoader() {
   return (
@@ -47,6 +48,7 @@ function App() {
               <Routes location={location} key={location.pathname}>
                 <Route path="/" element={<Home />} />
                 <Route path="/about" element={<About />} />
+                <Route path="/events" element={<Events />} />
                 <Route path="/contact" element={<Contact />} />
               </Routes>
             </AnimatePresence>

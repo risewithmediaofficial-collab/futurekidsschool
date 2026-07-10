@@ -2,11 +2,12 @@ import { useEffect, useState } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
-import SchoolIcon from "@mui/icons-material/School";
+import logo from "../assets/logo.jpeg";
 
 const navLinks = [
   { name: "Home", path: "/" },
   { name: "About", path: "/about" },
+  { name: "Events", path: "/events" },
   { name: "Contact", path: "/contact" },
 ];
 
@@ -46,9 +47,7 @@ function Navbar() {
     <header className="sticky top-0 z-50 border-b border-black/8 bg-white/95 backdrop-blur">
       <div className="page-shell flex items-center justify-between gap-4 py-3">
         <NavLink to="/" className="flex items-center gap-3" onClick={() => handleNavClick("/")}>
-          <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl bg-[#d91f26] text-white sm:h-11 sm:w-11">
-            <SchoolIcon fontSize="medium" />
-          </div>
+          <img src={logo} alt="Future Kids Kindergarten Logo" className="h-20 w-20 shrink-0 rounded-2xl object-cover sm:h-16 sm:w-16" />
           <div className="min-w-0">
             <p className="font-display text-[clamp(1.1rem,5vw,1.5rem)] font-bold leading-none text-black">
               Future Kids Kindergarten
